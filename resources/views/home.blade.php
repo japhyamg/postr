@@ -22,10 +22,10 @@
                     @if ($posts)
                         @foreach ($posts as $post)
                             <div class="card">
-                                {{-- <img src="..." class="card-img-top" alt="..."> --}}
+                                <img src="{{ $post->coverimage }}" class="card-img-top w-100" style="height: 250px;" alt="{{ $post->title }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $post->title }}</h5>
-                                    <p class="card-text">{{ $post->body }}</p>
+                                    <p class="card-text text-truncate">{{ $post->body }}</p>
                                     <div class="d-flex justify-content-start">
                                         <a href="#" class="btn btn-primary btn-sm mr-1">Read More</a>
                                         <a href="{{ route('post.edit', $post->id) }}" class="btn btn-warning btn-sm mr-1">Edit</a>

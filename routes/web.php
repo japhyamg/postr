@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index');
 Route::get('/p/{id}', 'PagesController@show')->name('post');
+Route::post('/like/{post}','LikesController@store');
 
 Auth::routes();
 
